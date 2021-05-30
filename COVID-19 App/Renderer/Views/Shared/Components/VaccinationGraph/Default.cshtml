@@ -1,0 +1,42 @@
+﻿@using Renderer.VaccinationGraph.ViewModels;
+@using System.Text.Json;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* This tag helper is necessary for the section-name to work and include the script *@
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@model VaccinationDataViewModel
+
+<script type="text/javascript" src="~/scripts/vaccinationGraph.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<div class="vaccination-graph container section-custom-container">
+    <div class="row justify-content-center">
+        <div class="col-10 text-section-title">COVID-19 Vaccine Doses by Country</div>
+        <div class="col-3 text-underlining"></div>
+    </div>
+
+    <p class="graphic-description">
+        The following map displays the amount of total COVID-19 vaccination doses administered by country.
+        This is counted as a single dose, and may not equal the total number of people vaccinated, depending on the specific dose regime (e.g. people receive multiple doses).
+        If a person receives one dose of the vaccine, this metric goes up by 1. If they receive a second dose, it goes up by 1 again.
+    </p>
+
+    <div class="row">
+        <div class="col-3">
+            <span class="text-section-title">Filter by Country</span>
+            <select class="country-select rounded" name="countryList" id="countryList">
+                @foreach (var country in Model.CountryList)
+                {
+                    <option value="@country.Key">@country.Value</option>
+                }
+            </select>
+        </div>
+        <div class="col-9 text-right">
+            <strong>Total Doses Administered: <span class="total-amount"></span></strong>
+        </div>
+    </div>
+
+    <div id="chart" class="graphic-chart" data-graph-model="@JsonSerializer.Serialize(Model)"></div>
+</div>

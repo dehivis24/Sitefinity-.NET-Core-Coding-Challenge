@@ -1,0 +1,48 @@
+@model IList<Renderer.ViewModels.VaccinationGallery.VaccinationInfoModel>
+
+<link rel="stylesheet" type="text/css" href="~/lib/slick/slick.css" />
+<link rel="stylesheet" type="text/css" href="~/lib/slick/slick-theme.css" />
+
+<div class="container-fluid section-custom-container">
+    <div class="row justify-content-center">
+        <div class="col-10 text-section-title">Vaccination Sites</div>
+        <div class="col-3 text-underlining"></div>
+    </div>
+
+    <div class="gallery my-4">
+        @foreach (var item in this.Model)
+        {
+<div class="card">
+    @if (item.Image != null)
+    {
+<img src="@item.Image" class="rounded mx-auto my-2 d-block" alt="@item.Name">                }
+    <div class="card-body">
+        <h5 class="card-title" style="min-height:50px">@item.Name</h5>
+
+        @{ switch (item.LocationType)
+            {
+                case "1":
+<span class="badge badge-success">Hospital</span> break;
+case "2":
+<span class="badge badge-warning">Health Area</span> break;
+case "3":
+<span class="badge badge-info">EBAIS</span> break;
+case "4":
+<span class="badge badge-danger">Medical Clinic</span> break;
+default:
+<span class="badge badge-secondary">Other</span> break;
+} }
+
+        <p class="card-text"><small>@item.City, @item.State, @item.Country</small></p>
+        @if (item.Page != null)
+        {
+<a href="@item.Page" class="btn btn-detail">View site</a>}
+
+    </div>
+</div>}
+    </div>
+</div>
+
+
+<script type="text/javascript" src="~/lib/slick/slick.js"></script>
+<script type="text/javascript" src="~/scripts/gallery.js"></script>

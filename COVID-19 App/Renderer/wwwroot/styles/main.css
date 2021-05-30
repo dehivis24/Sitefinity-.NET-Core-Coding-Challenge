@@ -1,0 +1,310 @@
+﻿/* CSS for Page Template*/
+
+body {
+    font-family: Open Sans;
+    font-style: normal;
+    width: 100%;
+}
+
+.navbar {
+    z-index: 1000;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: #292E3F;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.logo {
+    width: 40%;
+    height: 100%;
+    margin-left: 25px;
+}
+
+.btn {
+    color: #fff;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        color: #DF6B6F;
+        text-decoration: none;
+    }
+
+    .btn:focus {
+        color: #DF6B6F;
+        text-decoration: none;
+    }
+
+.fab {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    margin: 0px 15px 0px 15px;
+    border: 30px;
+}
+
+    .fab:hover {
+        background-color: rgba(255, 255, 255, 0.30);
+        border-radius: 5px;
+    }
+
+a.custom-nav-link {
+    color: #fff;
+}
+
+.text-underlining {
+    height: 5px;
+    border-radius: 5px;
+    background-color: #DF6B6F;
+    margin-top: 15px;
+}
+
+.section-custom-container {
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.border-text {
+    border: 1px solid rgba(223, 107, 111, 0.37);
+}
+
+.text-section-title {
+    color: #292E3F;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* CSS for Vaccination Gallery widget */
+
+.gallery {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+    .gallery .btn-detail {
+        background-color: #292E3F;
+    }
+
+    .gallery .btn-detail:hover {
+        background-color: #292E3F;
+    }
+
+/* COVID-19 Info Content Block */
+
+.container-info-covid {
+    background-color: #292E3F;
+    text-align: center;
+}
+
+.col-info-covid {
+    margin: 30px 0px 30px 0px;
+}
+
+.img-info-covid {
+    width: 100%;
+    padding: 30px;
+}
+
+.title-info-covid {
+    font-size: 24px;
+    color: #fff;
+}
+
+.text-info-covid {
+    font-size: 14px;
+    color: #fff;
+}
+
+.link-info-covid {
+    color: #DF6B6F;
+}
+
+/* Footer */
+
+.container-social-media {
+    background-color: #292E3F;
+    max-width: 100%;
+    margin: 0;
+    color: #fff;
+    padding: 40px 0px 40px 0px;
+}
+
+.Title-social-media {
+    font-size: 18px;
+}
+
+.Text-social-media {
+    font-size: 14px;
+}
+
+.fab-footer {
+    color: rgba(255, 255, 255, 0.40);
+    font-size: 36px;
+    text-align: center;
+    padding: 10px;
+    margin: 0px 15px 0px 15px;
+    border: 30px;
+}
+
+.Container-Footer {
+    background-color: #DF6B6F !important;
+    text-align: center;
+    color: #fff;
+}
+
+.text-Copyright {
+    margin: 5px 0px 5px 0px;
+    text-align: initial;
+}
+
+.btn-footer {
+    color: #fff;
+    text-decoration: none;
+}
+
+    .btn-footer:hover {
+        color: #292E3F !important;
+        text-decoration: none !important;
+    }
+
+    .btn-footer:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+
+.dropdown-footer {
+    width: 100%;
+    text-align: end;
+}
+
+
+/* Mobile */
+@media (max-width: 950px) {
+    /* Menu */
+    .logo {
+        width: 50%;
+    }
+
+    .navbar-light .navbar-toggler-icon {
+        background-image: url(Img/Menu.png) !important;
+    }
+
+    .navbar-light .navbar-toggler {
+        color: rgba(0,0,0,.0) !important;
+        border-color: rgba(0,0,0,.0) !important;
+    }
+
+    .justify-content-end {
+        -ms-flex-pack: end !important;
+        justify-content: flex-end !important;
+        flex-direction: column !important;
+        align-items: flex-end;
+        background: rgba(255, 255, 255, 0.90);
+        width: 45%;
+        float: right;
+        border-radius: 3%;
+    }
+
+    .social-media {
+        align-items: flex-end;
+    }
+
+    .btn {
+        color: #292E3F;
+        text-decoration: none;
+    }
+
+        .btn:hover:focus {
+            color: #DF6B6F;
+            text-decoration: none;
+        }
+
+    .btn {
+        color: #DF6B6F;
+        text-decoration: none;
+    }
+
+    .fab {
+        color: rgba(223, 107, 111, 0.80);
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+        margin: 0px 15px 0px 15px;
+        border: 30px;
+    }
+
+        .fab:hover {
+            background-color: rgba(255, 255, 255, 0.30);
+            border-radius: 5px;
+        }
+
+    /* footer */
+
+    .fab-footer {
+        color: rgba(255, 255, 255, 0.40);
+        font-size: 36px;
+        text-align: center;
+        padding: 10px;
+        margin: 0px 15px 0px 15px;
+        border: 30px;
+    }
+}
+
+/* CSS for Vaccination Graph widget */
+
+.vaccination-graph .total-amount {
+    color: #DF6B6F;
+}
+
+.vaccination-graph .graphic-description {
+    font-size: small;
+    font-style: italic;
+    padding: 5px 0px;
+    color: dimgray;
+    margin-top: 20px;
+}
+
+.vaccination-graph .graphic-chart {
+    margin-top: 10px;
+    border: 1px solid;
+    border-color: #f0eded;
+}
+
+.vaccination-graph .country-select {
+    border: 1px solid rgba(223, 107, 111, 0.37);
+}
+
+
+/* CSS for Vaccination Appointment widget */
+
+.appointment-form .appointment-title {
+    text-align: center;
+    color: #1d3d63;
+    font-weight: bold;
+}
+
+.appointment-form .btn-submit {
+    background-color: #DF6B6F;
+    border-color: #DF6B6F;
+}
+
+    .appointment-form .btn-submit:focus:active:hover:focus::selection {
+        background-color: rgba(255, 255, 255, 0);
+        border-color: #DF6B6F !important;
+        box-shadow: 0 0 0 0.2rem rgb(41 46 63 / 50%);
+        color: #fff;
+    }
+
+.appointment-form .fab-calendar {
+    font-size: 65px;
+    text-align: center;
+    border: 30px;
+}

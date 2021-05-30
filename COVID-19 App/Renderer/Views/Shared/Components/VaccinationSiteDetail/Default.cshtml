@@ -1,0 +1,114 @@
+﻿@using Renderer.ViewModels.VaccinationSiteDetail;
+
+@model SiteDetailViewModel
+
+<link rel="stylesheet" type="text/css" href="~/styles/siteDetail.css" />
+
+<div class="container mt-3">
+    <div class="row text-center justify-content-center">
+        <h2 class="col-12 detail-title">Vaccination Site Information</h2>
+        <div class="col-3 text-underlining"></div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md-6">
+            <dl>
+                <dt class="float-left mr-2">Health Center Name:</dt>
+                <dd>@Model.Name</dd>
+                <dt class="float-left mr-2">Location Type:</dt>
+                <dd>@Model.LocationType</dd>
+                <dt class="float-left mr-2">Region:</dt>
+                <dd>@Model.Region</dd>
+                <dt class="float-left mr-2">Address:</dt>
+                <dd>@Model.City, @Model.State, @Model.Country</dd>
+                <dt class="float-left mr-2">Email:</dt>
+                <dd>@Model.EmailAddress</dd>
+                <dt class="float-left mr-2">Phone:</dt>
+                <dd>@Model.PhoneNumber</dd>
+            </dl>
+        </div>
+        <div class="col-md-6">
+            <dl>
+                <dt class="float-left mr-2">Age Group:</dt>
+                <dd>@Model.AgeGroup</dd>
+                <dt class="float-left mr-2">Site Type:</dt>
+                <dd>@Model.SiteType</dd>
+                <dt class="float-left mr-2">Accessibility:</dt>
+                <dd>@Model.Accesibility</dd>
+            </dl>
+            <a href="@Model.MapDirectionsUrl">
+                <input class="btn btn-detail" type="submit" value="Directions" />
+            </a>
+            <a href="@Model.AppointmentUrl">
+                <input class="btn btn-detail" type="submit" value="Schedule Appointment" />
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h4 class="col-12 detail-title-instructions pl-0">Vaccination Instructions</h4>
+            @if (string.IsNullOrEmpty(@Model.VaccinactionInstructions))
+            {
+                <p class="instructions">Not Available</p>
+            }
+            else
+            {
+                <p class="instructions">@Model.VaccinactionInstructions</p>
+            }
+        </div>
+        <div class="col-md-6">
+            <img class="site-image" src="@Model.Image" />
+        </div>
+    </div>
+    <div class="vaccination-statistics-panel">
+        <div class="row text-center justify-content-center">
+            <h4 class="col-12 panel-title">Vaccination Statistics</h4>
+            <div class="col-3 text-underlining"></div>
+        </div>
+        <div class="statistics-box-panel">
+            <div class="vaccination-statistics-box mx-2">
+                <p>First Dose</p>
+                <label>@Model.FirstDose</label>
+            </div>
+            <div class="vaccination-statistics-box mx-2">
+                <p>Second Dose</p>
+                <label>@Model.SecondDose</label>
+            </div>
+            <div class="vaccination-statistics-box mx-2">
+                <p>Total Dose</p>
+                <label>@Model.TotalDose</label>
+            </div>
+        </div>
+    </div>
+    @if (Model.DisplayRiskFactors)
+    {
+        <table class="table responsive">
+            <thead>
+                <tr>
+                    <th colspan="2" class="text-center">Population Risk Factors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hypertension: @Model.Hypertension</td>
+                    <td>ObesityGrade3: @Model.ObesityGrade3</td>
+                </tr>
+                <tr>
+                    <td>Diabetes: @Model.Diabetes</td>
+                    <td>Morbid Obesity: @Model.MorbidObesity</td>
+                </tr>
+                <tr>
+                    <td>Heart Disease: @Model.HeartDisease</td>
+                    <td>Cancer: @Model.Cancer</td>
+                </tr>
+                <tr>
+                    <td>Chronic Respiratory Diseases: @Model.ChronicRespiratoryDiseases</td>
+                    <td>HIV-AIDS: @Model.HIVAIDS</td>
+                </tr>
+                <tr>
+                    <td>Chronic Kidney Disease: @Model.ChronicKidneyDisease</td>
+                    <td>Transplant: @Model.Transplant</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</div>

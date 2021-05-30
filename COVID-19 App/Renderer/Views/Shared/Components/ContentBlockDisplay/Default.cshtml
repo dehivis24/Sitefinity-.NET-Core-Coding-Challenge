@@ -1,0 +1,20 @@
+﻿@using Renderer.ViewModels.ContentBlockDisplay;
+@using Progress.Sitefinity.AspNetCore.Mvc.Rendering;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* This tag helper is necessary for the section-name to work and include the script *@
+@addTagHelper *, Progress.Sitefinity.AspNetCore
+
+@model ContentBlockDisplayViewModel
+
+@if (!string.IsNullOrEmpty(Model.Content))
+{
+    @Html.HtmlSanitize(Model.Content)
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        No Content Block selected!
+    </div>
+}

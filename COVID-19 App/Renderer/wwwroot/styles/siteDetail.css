@@ -1,0 +1,81 @@
+﻿/* CSS for Vaccination Site Detail widget */
+
+.detail-title {
+    color: #292E3F;
+}
+
+.btn {
+    color: #fff !important;
+}
+
+.btn:hover {
+    color: #fff !important;
+}
+
+.btn:focus {
+    color: #fff !important;
+}
+
+.btn-detail {
+    background-color: #DF6B6F;
+    border-color: #DF6B6F;
+    border-radius: 0.25rem;
+    margin-bottom: 5px;
+
+}
+.panel-title{
+    color: #fff;
+}
+
+.vaccination-statistics-panel {
+    border-radius: 0.25rem;
+    background-color: #292E3F;
+    padding: 20px;
+    margin: 40px 0 40px 0;
+}
+
+.vaccination-statistics-box {
+    color: #fff;
+    background-color: #DF6B6F;
+    width: 250px;
+    height: 100px;
+    border-radius: 0.25rem;
+    padding-top: 15px;
+}
+
+.statistics-box-panel {
+   
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px;    
+}
+
+.instructions {
+    margin-top: 25px;
+}
+
+.detail-title-instructions {
+    color: #DF6B6F;
+}
+
+.site-image {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.table {
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table th {
+    background-color: #292E3F;
+    color: #fff;
+}
+
+@media (max-width: 950px) {
+    .table {
+        width: auto;
+    }
+}

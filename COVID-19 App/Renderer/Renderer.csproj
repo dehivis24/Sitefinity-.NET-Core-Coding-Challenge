@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\scripts\vaccinationAppointment.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\scripts\vaccinationAppointment.js" />
+    <None Include="wwwroot\scripts\vaccinationGraph.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Progress.Sitefinity.AspNetCore" Version="13.3.7624.21782" />
+    <PackageReference Include="Progress.Sitefinity.AspNetCore.Widgets" Version="13.3.7624.21782" />
+    <PackageReference Include="Progress.Sitefinity.Renderer" Version="13.3.7624.21782" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+﻿.vaccination-site-search .container-sites {
+    height: 30rem;
+}
+
+.vaccination-site-search .map {
+    height: 100%;
+}
+
+.vaccination-site-search a:hover {
+    text-decoration: none;
+}
+
+.vaccination-site-search a {
+    color: #DF6B6F;
+}
+
+.vaccination-site-search a:hover {
+    color: #DF6B6F;
+}
+
+.vaccination-site-search .badge {
+    background-color: #292E3F;
+}
+
+.vaccination-site-search .badge-primary:focus {
+    background-color: #292E3F;
+}
